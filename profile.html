@@ -13,5 +13,126 @@
     />
     <title>Document</title>
   </head>
-  <body></body>
+  <body>
+    <main>
+      <nav class="nav d-flex justify-content-center">
+        <a class="nav-link" href="/feed.html">Latest posts</a>
+        <a class="nav-link active" aria-current="page" href="/profile.html"
+          >My profile</a
+        >
+      </nav>
+      <div>
+        <button type="button" class="btn btn-outline-primary m-3">
+          Follow
+        </button>
+        <div class="d-flex justify-content-center m-3 col-6">
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque,
+            vitae debitis dicta expedita facere voluptatem?
+          </p>
+          <div>
+            <img
+              src="/images/sobhan-joodi-Wl_N-A_Wp5U-unsplash.jpg"
+              class="img-thumbnail"
+              alt="Woman with black hair and dark sunglasses standing outside"
+            />
+          </div>
+        </div>
+        <div class="m-3 d-flex">
+          <p>
+            <button
+              class="btn btn-primary"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseWidthExample"
+              aria-expanded="false"
+              aria-controls="collapseWidthExample"
+            >
+              Following
+            </button>
+          </p>
+          <div style="min-height: 120px">
+            <div class="collapse collapse-horizontal" id="collapseWidthExample">
+              <div class="card card-body" style="width: 300px">
+                This is some placeholder content for a horizontal collapse. It's
+                hidden by default and shown when triggered.
+              </div>
+            </div>
+          </div>
+          <p>
+            <button
+              class="btn btn-primary"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseWidthExample"
+              aria-expanded="false"
+              aria-controls="collapseWidthExample"
+            >
+              Followers
+            </button>
+          </p>
+          <div style="min-height: 120px">
+            <div class="collapse collapse-horizontal" id="collapseWidthExample">
+              <div class="card card-body" style="width: 300px">
+                This is some placeholder content for a horizontal collapse. It's
+                hidden by default and shown when triggered.
+              </div>
+            </div>
+          </div>
+          <a
+            type="button"
+            class="btn-primary text-center d-flex justify-content-end"
+            href="/index.html"
+            >Log out</a
+          >
+        </div>
+      </div>
+      <h1 class="m-3">Profile Name</h1>
+      <div class="d-flex justify-content-center">
+        <form class="d-flex col-4 m-3" role="search">
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+        </form>
+        <p>
+          <button
+            class="btn btn-primary"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseWidthExample"
+            aria-expanded="false"
+            aria-controls="collapseWidthExample"
+          >
+            +
+          </button>
+        </p>
+        <div style="min-height: 120px">
+          <div class="collapse collapse-horizontal" id="collapseWidthExample">
+            <div class="card card-body" style="width: 300px">
+              This is some placeholder content for a horizontal collapse. It's
+              hidden by default and shown when triggered.
+            </div>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button
+            class="btn btn-secondary dropdown-toggle"
+            type="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Dropdown button
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>
