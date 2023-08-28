@@ -1,0 +1,44 @@
+$primary-color: #aca3a3;
+$accent-color: #dba007;
+$fill-color: #d9d9d9;
+$text-color: #343232;
+$form-color: #d7b86a;
+$img-border-radius: 50%;
+$text-border-radius: 3rem;
+
+body {
+  background: $primary-color;
+  margin: 5%;
+}
+
+.btn,
+.form-control {
+  background-color: $fill-color;
+  color: $text-color;
+  border-color: $accent-color;
+  border-radius: 50px;
+}
+
+.nav-link,
+.btn-primary {
+  color: $text-color;
+  text-decoration: none;
+}
+
+.login {
+  background-color: $form-color;
+  padding: 2rem;
+  margin: 5%;
+  border-radius: $text-border-radius;
+}
+
+.text-border,
+.card-img-top {
+  background-color: $fill-color;
+  border-radius: $text-border-radius;
+}
+
+.img-thumbnail {
+  border-radius: $img-border-radius;
+  padding: 0%;
+}

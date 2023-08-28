@@ -11,6 +11,7 @@
       rel="stylesheet"
       href="node_modules/bootstrap/dist/css/bootstrap.min.css"
     />
+    <link rel="stylesheet" href="dist/css/main.css" />
     <title>Document</title>
   </head>
   <body>
@@ -21,8 +22,8 @@
           >My profile</a
         >
       </nav>
-      <div>
-        <button type="button" class="btn btn-outline-primary m-3 col-4">
+      <div class="text-border">
+        <button type="button" class="btn btn-outline-primary m-4 col-4">
           Follow
         </button>
         <div class="d-flex justify-content-center">
@@ -40,7 +41,7 @@
             />
           </div>
         </div>
-        <div class="m-3 d-flex">
+        <div class="d-flex">
           <p>
             <button
               class="btn btn-primary m-3"
@@ -73,23 +74,14 @@
               Followers
             </button>
           </p>
-          <div style="min-height: 120px">
-            <div class="collapse collapse-horizontal" id="collapseWidthExample">
-              <div class="card card-body" style="width: 300px">
-                This is some placeholder content for a horizontal collapse. It's
-                hidden by default and shown when triggered.
-              </div>
-            </div>
-          </div>
-          <a
-            type="button"
-            class="btn-primary text-center d-flex justify-content-end"
-            href="/index.html"
+        </div>
+        <div class="d-flex justify-content-between p-3">
+          <h1 class="m-3">ProfileName</h1>
+          <a type="button" class="btn-primary m-3" href="/index.html"
             >Log out</a
           >
         </div>
       </div>
-      <h1 class="m-3">Profile Name</h1>
       <div class="d-flex justify-content-between m-4">
         <form class="col-4" role="search">
           <input
@@ -126,13 +118,81 @@
             data-bs-toggle="dropdown"
             aria-expanded="false"
           >
-            Dropdown button
+            Sort
           </button>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="#">Action</a></li>
             <li><a class="dropdown-item" href="#">Another action</a></li>
             <li><a class="dropdown-item" href="#">Something else here</a></li>
           </ul>
+        </div>
+      </div>
+      <div class="d-flex flex-column align-items-center">
+        <div class="card text-border" style="width: 18rem">
+          <img
+            src="images/pawel-czerwinski-ruJm3dBXCqw-unsplash.jpg"
+            class="card-img-top"
+            alt="Abstract blue and pink art"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+            <div class="d-flex justify-content-between">
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+              <img
+                src="/images/sobhan-joodi-Wl_N-A_Wp5U-unsplash.jpg"
+                class="img-thumbnail col-2"
+                alt="Woman with black hair and dark sunglasses standing outside"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="card text-border" style="width: 18rem">
+          <img
+            src="images/pawel-czerwinski-ruJm3dBXCqw-unsplash.jpg"
+            class="card-img-top"
+            alt="Abstract blue and pink art"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+            <div class="d-flex justify-content-between">
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+              <img
+                src="/images/sobhan-joodi-Wl_N-A_Wp5U-unsplash.jpg"
+                class="img-thumbnail col-2"
+                alt="Woman with black hair and dark sunglasses standing outside"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="card text-border" style="width: 18rem">
+          <img
+            src="images/pawel-czerwinski-ruJm3dBXCqw-unsplash.jpg"
+            class="card-img-top"
+            alt="Abstract blue and pink art"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+            <div class="d-flex justify-content-between">
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+              <img
+                src="/images/sobhan-joodi-Wl_N-A_Wp5U-unsplash.jpg"
+                class="img-thumbnail col-2"
+                alt="Woman with black hair and dark sunglasses standing outside"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </main>
