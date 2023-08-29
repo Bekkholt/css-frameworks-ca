@@ -16,12 +16,22 @@ body {
   background-color: $light;
   color: $dark;
   border-color: $secondary;
+
+  &:hover {
+    background-color: $secondary;
+    border-color: $primary;
+  }
 }
 
 .nav-link,
 .btn-primary {
   color: $dark;
   text-decoration: none;
+
+  &:hover {
+    color: $dark;
+    text-decoration: overline $dark;
+  }
 }
 
 .img-thumbnail {
@@ -30,5 +40,5 @@ body {
 }
 
 .active {
-  text-decoration: overline $secondary;
+  text-decoration: overline $dark;
 }
