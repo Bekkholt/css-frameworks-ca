@@ -23,3 +23,12 @@ body {
   color: $dark;
   text-decoration: none;
 }
+
+.img-thumbnail {
+  background-color: $secondary;
+  border: none;
+}
+
+.active {
+  text-decoration: overline $secondary;
+}
