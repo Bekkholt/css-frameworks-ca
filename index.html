@@ -18,7 +18,10 @@
   <body>
     <main>
       <h1 class="d-flex justify-content-center">Social Media Application</h1>
-      <form class="container d-flex justify-content-center col-10 p-3">
+      <form
+        class="container d-flex justify-content-center col-10 p-3"
+        action="profile.html"
+      >
         <div>
           <label for="exampleFormControlInput1" class="form-label"
             >Username</label
@@ -36,18 +39,13 @@
             id="inputPassword"
           />
           <div class="row mt-4">
-            <button
-              type="submit"
-              class="btn mt-1 rounded-pill"
-              href="profile.html"
-            >
-              Log in
-            </button>
+            <input type="submit" class="btn mt-1 rounded-pill" value="Log in" />
             <button type="button" class="btn mt-1 rounded-pill">
               Create new profile
             </button>
           </div>
         </div>
+      </form>
     </main>
   </body>
 </html>
