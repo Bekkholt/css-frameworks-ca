@@ -13,27 +13,35 @@
   <body>
     <main>
       <h1 class="d-flex justify-content-center">Social Media Application</h1>
-      <form class="container d-flex justify-content-center">
-        <div class="login col-8">
+      <form class="container d-flex justify-content-center col-10 p-3">
+        <div>
           <label for="exampleFormControlInput1" class="form-label"
             >Username</label
           >
           <input
             type="text"
-            class="form-control"
+            class="form-control rounded-pill"
             id="exampleFormControlInput1"
           />
           <label for="inputPassword" class="form-label">Password</label>
-          <input type="password" class="form-control" id="inputPassword" />
-          <div class="row">
+          <input
+            type="password"
+            class="form-control rounded-pill"
+            min-length="8"
+            id="inputPassword"
+          />
+          <div class="row mt-4">
             <a
               type="submit"
-              class="btn btn-outline-primary"
+              class="btn btn-outline-primary rounded-pill"
               href="/profile.html"
               role="button"
               >Log in</a
             >
-            <button type="button" class="btn btn-outline-primary">
+            <button
+              type="button"
+              class="btn btn-outline-primary mt-1 rounded-pill"
+            >
               Create new profile
             </button>
           </div>
