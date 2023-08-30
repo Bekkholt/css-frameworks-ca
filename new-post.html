@@ -27,16 +27,17 @@
       <divc class="d-flex justify-content-center">
         <form class="container p-3 col-8">
             <div class="p-3">
-                <input type="button" class="form-control p-3" value="Upload image (optional)" />
+                <label class="form-label">Upload image (optional)</label>
+                <input class="form-control rounded-pill" type="file" id="formFile">
               </div>
           <div class="p-3">
-            <input type="text" class="form-control p-3" placeholder="Title" />
+            <input type="text" class="form-control p-3 rounded-pill" placeholder="Title" />
           </div>
-          <div class="p-3">
-            <input type="text" class="form-control p-3" placeholder="Post text" />
+          <div class="m-2">
+            <textarea type="text" class="form-control p-4 rounded-pill" placeholder="Post text"></textarea>
           </div>
           <div class="m-4">
-            <input type="button" class="form-control p-1" value="Post to feed" />
+            <a type="button" class=" btn p-4 rounded-pill d-flex justify-content-center" href="feed.html">Upload to feed</a>
           </div>
           <a type="button" class="btn-primary m-3 d-flex justify-content-center" href="/profile.html"
           >Back</a
