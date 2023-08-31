@@ -5,86 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
-      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+      href="../node_modules/bootstrap/dist/css/bootstrap.min.css"
     />
-    <link rel="stylesheet" href="dist/css/main.css" />
+    <link rel="stylesheet" href="../dist/css/main.css" />
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
       crossorigin="anonymous"
     ></script>
-    <title>My profile</title>
+    <title>Feed</title>
   </head>
-  <body>
+  <body class="bg-primary">
     <main>
       <nav class="nav navbar d-flex justify-content-center">
-        <a class="nav-link" href="/feed.html">Latest posts</a>
-        <a class="nav-link active" aria-current="page" href="/profile.html"
-          >My profile</a
+        <a
+          class="nav-link btn active"
+          aria-current="page"
+          href="/feed/index.html"
+          >Latest posts</a
         >
+        <a class="btn" href="/profile/index.html">My profile</a>
       </nav>
       <div class="d-flex justify-content-center">
-        <div class="card rounded col-11 col-md-8 col-lg-6">
-          <button type="button" class="btn m-4 col-4 rounded-pill">
-            Follow
-          </button>
-          <div class="d-flex justify-content-center">
-            <p class="p-2 m-2">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque,
-              vitae debitis dicta expedita facere voluptatem? Lorem, ipsum dolor
-              sit amet consectetur adipisicing elit. Itaque, vitae debitis dicta
-              expedita facere voluptatem?
-            </p>
-            <div class="m-2 col-4">
-              <img
-                src="/images/sobhan-joodi-Wl_N-A_Wp5U-unsplash.jpg"
-                class="img-thumbnail rounded-circle"
-                alt="Woman with black hair and dark sunglasses standing outside"
-              />
-            </div>
-          </div>
-          <div class="d-flex">
-            <p>
-              <button
-                class="btn m-3 rounded-pill"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseWidthExample"
-                aria-expanded="false"
-                aria-controls="collapseWidthExample"
-              >
-                Following
-              </button>
-            </p>
-            <div>
-              <div
-                class="collapse collapse-horizontal"
-                id="collapseWidthExample"
-              >
-                <div class="card card-body">
-                  A list of followers will be presented here.
-                </div>
-              </div>
-            </div>
-            <p>
-              <button
-                class="btn m-3 rounded-pill"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseWidthExample"
-                aria-expanded="false"
-                aria-controls="collapseWidthExample"
-              >
-                Followers
-              </button>
-            </p>
-          </div>
-          <div class="d-flex justify-content-between p-2">
-            <h1 class="m-3">Username</h1>
-            <a type="button" class="btn-primary m-3" href="/index.html"
-              >Log out</a
-            >
-          </div>
+        <div class="col-3 col-lg-2 d-flex justify-content-center">
+          <img
+            src="../images/sobhan-joodi-Wl_N-A_Wp5U-unsplash.jpg"
+            class="img-thumbnail rounded-circle bg-secondary border border-0"
+            alt="Woman with black hair and dark sunglasses standing outside"
+          />
         </div>
       </div>
       <div class="d-flex justify-content-center m-4">
@@ -98,7 +46,7 @@
         </form>
         <div class="dropdown p-3">
           <button
-            class="btn dropdown-toggle rounded-pill"
+            class="btn btn-light dropdown-toggle rounded-pill"
             type="button"
             data-bs-toggle="dropdown"
             aria-expanded="false"
@@ -107,20 +55,16 @@
           </button>
           <ul class="dropdown-menu">
             <li>
-              <a class="dropdown-item" href="new-post.html">Create new post</a>
+              <a class="dropdown-item" href="../new-post.html"
+                >Create new post</a
+              >
             </li>
             <li><a class="dropdown-item" href="#">Open draft</a></li>
           </ul>
         </div>
-        <div>
-          <div
-            class="collapse collapse-horizontal"
-            id="collapseWidthExample"
-          ></div>
-        </div>
         <div class="dropdown p-3">
           <button
-            class="btn dropdown-toggle rounded-pill"
+            class="btn btn-light dropdown-toggle rounded-pill"
             type="button"
             data-bs-toggle="dropdown"
             aria-expanded="false"
@@ -136,23 +80,26 @@
       <div class="d-flex flex-column align-items-center">
         <div class="card col-10 m-3 col-md-8 col-lg-6">
           <img
-            src="images/pawel-czerwinski-ruJm3dBXCqw-unsplash.jpg"
+            src="../images/pawel-czerwinski-ruJm3dBXCqw-unsplash.jpg"
             class="card-img-top"
             alt="Abstract blue and pink art"
           />
-          <div class="card-body">
+          <div class="card-body bg-light">
             <h5 class="card-title">Post title</h5>
             <p class="card-text">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque,
               vitae debitis dicta expedita facere voluptatem?
             </p>
             <div class="d-flex justify-content-between">
-              <button href="#" class="btn rounded-pill col-lg-6">
+              <button
+                href="#"
+                class="btn btn-dark btn-outline-secondary rounded-pill col-lg-6"
+              >
                 Go to post
               </button>
               <img
-                src="/images/sobhan-joodi-Wl_N-A_Wp5U-unsplash.jpg"
-                class="img-thumbnail col-2 rounded-circle"
+                src="../images/sobhan-joodi-Wl_N-A_Wp5U-unsplash.jpg"
+                class="img-thumbnail col-2 rounded-circle bg-secondary border border-0"
                 alt="Woman with black hair and dark sunglasses standing outside"
               />
             </div>
@@ -160,23 +107,26 @@
         </div>
         <div class="card col-10 m-3 col-md-8 col-lg-6">
           <img
-            src="images/pawel-czerwinski-ruJm3dBXCqw-unsplash.jpg"
+            src="../images/pawel-czerwinski-ruJm3dBXCqw-unsplash.jpg"
             class="card-img-top"
             alt="Abstract blue and pink art"
           />
-          <div class="card-body">
+          <div class="card-body bg-light">
             <h5 class="card-title">Post title</h5>
             <p class="card-text">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque,
               vitae debitis dicta expedita facere voluptatem?
             </p>
             <div class="d-flex justify-content-between">
-              <button href="#" class="btn rounded-pill col-lg-6">
+              <button
+                href="#"
+                class="btn btn-dark btn-outline-secondary rounded-pill col-lg-6"
+              >
                 Go to post
               </button>
               <img
-                src="/images/sobhan-joodi-Wl_N-A_Wp5U-unsplash.jpg"
-                class="img-thumbnail col-2 rounded-circle"
+                src="../images/sobhan-joodi-Wl_N-A_Wp5U-unsplash.jpg"
+                class="img-thumbnail col-2 rounded-circle bg-secondary border border-0"
                 alt="Woman with black hair and dark sunglasses standing outside"
               />
             </div>
@@ -184,23 +134,26 @@
         </div>
         <div class="card col-10 m-3 col-md-8 col-lg-6">
           <img
-            src="images/pawel-czerwinski-ruJm3dBXCqw-unsplash.jpg"
+            src="../images/pawel-czerwinski-ruJm3dBXCqw-unsplash.jpg"
             class="card-img-top"
             alt="Abstract blue and pink art"
           />
-          <div class="card-body">
+          <div class="card-body bg-light">
             <h5 class="card-title">Post title</h5>
             <p class="card-text">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque,
               vitae debitis dicta expedita facere voluptatem?
             </p>
             <div class="d-flex justify-content-between">
-              <button href="#" class="btn rounded-pill col-lg-6">
+              <button
+                href="#"
+                class="btn btn-dark btn-outline-secondary rounded-pill col-lg-6"
+              >
                 Go to post
               </button>
               <img
-                src="/images/sobhan-joodi-Wl_N-A_Wp5U-unsplash.jpg"
-                class="img-thumbnail col-2 rounded-circle"
+                src="../images/sobhan-joodi-Wl_N-A_Wp5U-unsplash.jpg"
+                class="img-thumbnail col-2 rounded-circle bg-secondary border border-0"
                 alt="Woman with black hair and dark sunglasses standing outside"
               />
             </div>
