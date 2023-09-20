@@ -40,6 +40,7 @@ async function submit() {
     const errors = json.errors;
     let errorText = "";
     for (let i = 0; i < errors.length; i++) {
+      if (i !== 0) errorText += ", ";
       const error = errors[i];
       errorText += error.message;
     }

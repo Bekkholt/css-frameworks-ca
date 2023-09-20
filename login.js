@@ -29,7 +29,24 @@ async function submit() {
     email: email.value,
     password: password.value,
   };
-  await userLogin(`${apiUrl}/api/v1/social/auth/login`, login);
+  const json = await userLogin(`${apiUrl}/api/v1/social/auth/login`, login);
+  console.log(json);
+
+  if (json.statusCode === undefined) {
+    location.href = "/profile";
+  } else {
+    const showError = document.querySelector("#showError");
+    showError.classList.remove("invisible");
+    const errorMessage = document.querySelector("#errorMessage");
+    const errors = json.errors;
+    let errorText = "";
+    for (let i = 0; i < errors.length; i++) {
+      if (i !== 0) errorText += ", ";
+      const error = errors[i];
+      errorText += error.message;
+    }
+    errorMessage.textContent = errorText;
+  }
 }
 
 form.addEventListener("submit", async (event) => {
@@ -47,7 +64,7 @@ async function fetchToken(url) {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
-        Authrorization: `Bearer ${token}`,
+        Authorization: `Bearer ${token}`,
       },
     };
     const response = await fetch(url, getData);
@@ -60,3 +77,19 @@ async function fetchToken(url) {
 }
 
 fetchToken(apiUrl + "/api/v1/social/posts");
+
+// if (json.statusCode === 200) {
+//   location.href = "/profile";
+// } else {
+//   const showError = document.querySelector("#showError");
+//   showError.classList.remove("invisible");
+//   const errorMessage = document.querySelector("#errorMessage");
+//   const errors = json.errors;
+//   let errorText = "";
+//   for (let i = 0; i < errors.length; i++) {
+//     if (i !== 0) errorText += ", ";
+//     const error = errors[i];
+//     errorText += error.message;
+//   }
+//   errorMessage.textContent = errorText;
+// }
