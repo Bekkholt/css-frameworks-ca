@@ -3,10 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
-    />
     <link rel="stylesheet" href="dist/css/main.css" />
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
@@ -48,6 +44,7 @@
           />
           <div class="row mt-4">
             <button
+              href="index.html"
               type="submit"
               class="btn btn-dark btn-outline-secondary mt-1 rounded-pill"
             >
@@ -61,10 +58,23 @@
             >
               Go back to login
             </button>
-            </div>
-          </div>
+          </a>
         </div>
       </form>
+      <div
+        class="alert alert-success rounded pill m-4 invisible"
+        role="alert"
+        id="showSuccess"
+      >
+        Your profile is registered!
+      </div>
+      <div
+        class="alert alert-danger rounded pill m-4 invisible"
+        role="alert"
+        id="showError"
+      >
+        <p id="errorMessage"></p>
+      </div>
     </main>
   </body>
 </html>
