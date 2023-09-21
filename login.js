@@ -3,6 +3,15 @@ const form = document.querySelector("#form");
 const email = document.querySelector("#email");
 const password = document.querySelector("#inputPassword");
 
+/**
+ * This will get the login data from the API and
+ * send the access token to local storage and
+ * the API
+ * @param {string} url
+ * @param {string} login
+ * @returns the json data
+ */
+
 async function userLogin(url, login) {
   try {
     const data = {
@@ -23,6 +32,12 @@ async function userLogin(url, login) {
     console.log(error);
   }
 }
+
+/**
+ * This will check the data inserted when
+ * submitted to see if the login is
+ * successful or if it has errors
+ */
 
 async function submit() {
   const login = {
@@ -53,9 +68,13 @@ form.addEventListener("submit", async (event) => {
   event.preventDefault();
   await submit();
 });
-// tina
-// tina.testuser@noroff.no
-// password1234
+
+/**
+ * This will fetch the token from
+ * local storage and put in the header
+ * and get a list of posts from the API
+ * @param {string} url
+ */
 
 async function fetchToken(url) {
   try {
@@ -78,18 +97,6 @@ async function fetchToken(url) {
 
 fetchToken(apiUrl + "/api/v1/social/posts");
 
-// if (json.statusCode === 200) {
-//   location.href = "/profile";
-// } else {
-//   const showError = document.querySelector("#showError");
-//   showError.classList.remove("invisible");
-//   const errorMessage = document.querySelector("#errorMessage");
-//   const errors = json.errors;
-//   let errorText = "";
-//   for (let i = 0; i < errors.length; i++) {
-//     if (i !== 0) errorText += ", ";
-//     const error = errors[i];
-//     errorText += error.message;
-//   }
-//   errorMessage.textContent = errorText;
-// }
+// tina
+// tina.testuser@noroff.no
+// password1234

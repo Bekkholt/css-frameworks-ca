@@ -5,6 +5,13 @@ const password = document.querySelector("#inputPassword");
 const form = document.querySelector("#form");
 const errorMessage = document.querySelector(".text-danger");
 
+/**
+ * This will get the url and data from the API
+ * @param {string} url
+ * @param {string} user
+ * @returns the json data
+ */
+
 async function register(url, user) {
   try {
     const data = {
@@ -20,6 +27,12 @@ async function register(url, user) {
     return json;
   } catch (error) {}
 }
+
+/**
+ * This will submit the data inserted in
+ * the form and check if the registration
+ * is successful or if it has errors
+ */
 
 async function submit() {
   const user = {
