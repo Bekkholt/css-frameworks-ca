@@ -95,8 +95,6 @@ async function fetchToken(url) {
   }
 }
 
-fetchToken(apiUrl + "/api/v1/social/posts");
-
 // tina
 // tina.testuser@noroff.no
 // password1234
