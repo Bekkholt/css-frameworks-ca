@@ -18,14 +18,12 @@ export async function fetchPosts(url) {
       },
     };
     const response = await fetch(url, getData);
-    console.log(response);
-    const json = await response.json();
-    return json;
+    const posts = await response.json();
+    return posts;
   } catch (error) {}
 }
 
 const posts = await fetchPosts(allPostsUrl);
-console.log(posts);
 
 /**
  * This will display the posts from the API in the feed
