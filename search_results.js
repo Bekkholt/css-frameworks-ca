@@ -42,6 +42,8 @@ const posts = await fetchPosts(allPostsUrl);
 
 function filterPosts(posts, searchText) {
   const results = posts.filter(function (post) {
+    if (!post.body) post.body = "";
+    if (!post.title) post.title = "";
     const postTitle = post.title.toLowerCase();
     const postBody = post.body.toLowerCase();
     const search = searchText.toLowerCase();
@@ -61,7 +63,6 @@ function showResults(results) {
     searchResult.textContent = "No result";
   } else {
     for (let i = 0; i < results.length; i++) {
-      const card = document.querySelector(".posts");
       const cardTextContent = document.createElement("div");
       const imageContainer = document.createElement("img");
       const postTitle = document.createElement("h5");
@@ -90,6 +91,7 @@ function showResults(results) {
       );
 
       btnText.textContent = "Go to post";
+
       postTitle.textContent = results[i].title;
       postText.textContent = results[i].body;
 
