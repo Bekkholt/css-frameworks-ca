@@ -20,7 +20,6 @@ async function createPost(url, title, body) {
       body: JSON.stringify({
         title: title,
         body: body,
-        userID: "",
       }),
     };
     const response = await fetch(url, getData);

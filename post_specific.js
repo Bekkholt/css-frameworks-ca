@@ -46,15 +46,22 @@ function createPostHTML(specificPost) {
   const postText = document.createElement("p");
   const lowerCard = document.createElement("div");
   const postLink = document.createElement("a");
+  const updateLink = document.createElement("a");
 
   const tags = lowerCard.appendChild(document.createElement(`h6`));
   const button = postLink.appendChild(document.createElement(`button`));
-  const btnText = button.appendChild(document.createElement(`h5`));
+  const btnText = button.appendChild(document.createElement(`h6`));
   const lowerEnd = lowerCard.appendChild(document.createElement(`div`));
-  const updated = lowerEnd.appendChild(document.createElement(`h6`));
+  const lastUpdated = lowerEnd.appendChild(document.createElement(`h6`));
   const created = lowerEnd.appendChild(document.createElement(`h6`));
+  const updateButton = updateLink.appendChild(document.createElement(`button`));
+  const updateBtnText = updateButton.appendChild(document.createElement(`h6`));
   const titleUrl = "../post_specific.html?id=";
+  const editURL = "/update-post.html?id=";
   postLink.href = titleUrl + `${specificPost.id}`;
+  updateLink.href = editURL + `${specificPost.id}`;
+
+  console.log({ updateLink: updateLink.href });
 
   card.classList.add("col-10", "m-3", "col-md-8", "col-lg-6");
   cardTextContent.classList.add("mb-4", "p-3", "bg-light");
@@ -63,12 +70,20 @@ function createPostHTML(specificPost) {
   postText.classList.add("card-text", "d-flex", "justify-content-center");
   postLink.classList.add("btn-outline-secondary", "col-lg-6", "m-4");
   lowerEnd.classList.add("d-flex", "flex-column", "pt-5");
+  updateButton.classList.add(
+    "btn",
+    "btn-dark",
+    "btn-outline-secondary",
+    "rounded-pill",
+    "col-3"
+  );
 
   btnText.textContent = "Go to post";
   postTitle.textContent = specificPost.title;
   postText.textContent = specificPost.body;
-  updated.textContent = "Last updated:" + " " + specificPost.updated;
+  lastUpdated.textContent = "Last updated:" + " " + specificPost.updated;
   created.textContent = "Created:" + " " + specificPost.created;
+  updateBtnText.textContent = "Edit post";
 
   if (specificPost.media) {
     imageContainer.src = specificPost.media;
@@ -83,6 +98,7 @@ function createPostHTML(specificPost) {
   cardTextContent.append(postTitle);
   cardTextContent.append(postText);
   cardTextContent.append(lowerCard);
+  lowerCard.append(updateLink);
 }
 
 const specificPost = await fetchSpecificPost(id);
