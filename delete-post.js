@@ -27,4 +27,10 @@ async function deletePost(url) {
 async function onClick(event) {
   event.preventDefault();
   await deletePost(allPostsUrl + id);
+  if (deletePost.statusCode === undefined) {
+    location.href = "/feed";
+  } else {
+    const showError = document.querySelector("#showError");
+    showError.classList.remove("invisible");
+  }
 }

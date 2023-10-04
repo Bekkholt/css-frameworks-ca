@@ -26,8 +26,6 @@ async function fetchSpecificPost(id) {
     const response = await fetch(allPostsUrl + `${id}`, getData);
     const result = await response.json();
 
-    console.log({ id, token, response, allPostsUrl, result });
-
     return result;
   } catch (error) {}
 }
@@ -42,9 +40,7 @@ const titleContainer = document.querySelector(".title");
 const bodyContainer = document.querySelector(".body");
 
 function postDetails(post) {
-  if (imageContainer.value) {
-    imageContainer.value = post.image;
-  }
+  imageContainer.value = post.media;
   titleContainer.value = post.title;
   bodyContainer.value = post.body;
 }
@@ -76,4 +72,10 @@ async function onClick(event) {
   const title = titleContainer.value;
   const body = bodyContainer.value;
   await editPost(allPostsUrl + id, image, title, body);
+  if (editPost.statusCode === undefined) {
+    location.href = "/feed";
+  } else {
+    const showError = document.querySelector("#showError");
+    showError.classList.remove("invisible");
+  }
 }

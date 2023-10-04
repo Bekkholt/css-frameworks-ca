@@ -23,16 +23,18 @@
       <h1 class="d-flex justify-content-center">Create new post</h1>
       <divc class="d-flex justify-content-center">
         <form class="container p-3 col-8">
-            <div class="p-3">
-                <label class="form-label">Upload image (optional)</label>
-                <input class="form-control rounded-pill image" type="file" id="formFile">
-              </div>
           <div class="p-3">
-            <input type="text" class="form-control p-3 rounded-pill title" placeholder="Title" />
+            <input class="form-control p-3 rounded-pill image" type="text" placeholder="Image link (optional)">
+            <input type="text" class="form-control p-3 mt-3 rounded-pill title" placeholder="Title" />
+            <textarea type="text" class="form-control p-4 mt-3 rounded-pill body" placeholder="Post text"></textarea>
           </div>
-          <div class="m-2">
-            <textarea type="text" class="form-control p-4 rounded-pill body" placeholder="Post text"></textarea>
-          </div>
+          <div
+          class="alert alert-danger rounded pill m-4 invisible"
+          role="alert"
+          id="showError"
+        >
+          <p id="errorMessage">Error! Post not created.</p>
+        </div>
           <div class="m-4">
             <a type="button" class="btn btn-dark btn-outline-secondary p-4 rounded-pill d-flex justify-content-center upload">Upload to feed</a>
           </div>
