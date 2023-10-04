@@ -10,6 +10,11 @@ const params = new URLSearchParams(queryString);
 
 const id = params.get("id");
 
+/**
+ * This deletes the selected
+ * post from the API
+ * @param {string} url
+ */
 async function deletePost(url) {
   try {
     const token = localStorage.getItem("accessToken");
@@ -24,9 +29,20 @@ async function deletePost(url) {
   } catch (error) {}
 }
 
+/**
+ * This deletes the post from
+ * the API when clicking "delete"
+ * and returns the user to the
+ * feed page if succeeded or
+ * gives an error message if it fails
+ * @param {string} event
+ */
 async function onClick(event) {
   event.preventDefault();
   await deletePost(allPostsUrl + id);
+  /* Statuscode is set to *undefined* as this is
+  what is returned when it is successful
+  and goes through to the API*/
   if (deletePost.statusCode === undefined) {
     location.href = "/feed";
   } else {

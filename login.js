@@ -22,15 +22,11 @@ async function userLogin(url, login) {
       body: JSON.stringify(login),
     };
     const response = await fetch(url, data);
-    console.log(response);
     const json = await response.json();
     const accessToken = json.accessToken;
     localStorage.setItem("accessToken", accessToken);
-    console.log(json);
     return json;
-  } catch (error) {
-    console.log(error);
-  }
+  } catch (error) {}
 }
 
 /**
@@ -45,7 +41,6 @@ async function submit() {
     password: password.value,
   };
   const json = await userLogin(`${apiUrl}/api/v1/social/auth/login`, login);
-  console.log(json);
 
   if (json.statusCode === undefined) {
     location.href = "/profile";
@@ -87,14 +82,10 @@ async function fetchToken(url) {
       },
     };
     const response = await fetch(url, getData);
-    console.log(response);
     const json = await response.json();
-    console.log(json);
-  } catch (error) {
-    console.log(error);
-  }
+  } catch (error) {}
 }
 
-// tina
-// tina.testuser@noroff.no
-// password1234
+// user: tina
+// mail: tina.testuser@noroff.no
+// password: password1234

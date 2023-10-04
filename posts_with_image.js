@@ -25,8 +25,6 @@ async function fetchPosts(url) {
 
 const posts = await fetchPosts(allPostsUrl);
 
-console.log(posts);
-
 /**
  * This will filter through the posts
  * in the API and find the ones with an image

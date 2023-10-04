@@ -26,8 +26,6 @@ async function fetchSpecificPost(id) {
     const response = await fetch(allPostsUrl + `${id}`, getData);
     const result = await response.json();
 
-    console.log({ id, token, response, allPostsUrl, result });
-
     return result;
   } catch (error) {}
 }
@@ -60,8 +58,6 @@ function createPostHTML(specificPost) {
   const editURL = "/update-post.html?id=";
   postLink.href = titleUrl + `${specificPost.id}`;
   updateLink.href = editURL + `${specificPost.id}`;
-
-  console.log({ updateLink: updateLink.href });
 
   card.classList.add("col-10", "m-3", "col-md-8", "col-lg-6");
   cardTextContent.classList.add("mb-4", "p-3", "bg-light");

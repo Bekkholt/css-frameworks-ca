@@ -79,34 +79,6 @@ export function displayPost(posts) {
   lowerCard.append(postLink);
 }
 
-/* <div class="card col-10 m-3 col-md-8 col-lg-6">
-<img
-  src="../images/pawel-czerwinski-ruJm3dBXCqw-unsplash.jpg"
-  class="card-img-top"
-  alt="Abstract blue and pink art"
-/>
-<div class="card-body bg-light">
-  <h5 class="card-title">Post title</h5>
-  <p class="card-text">
-    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque,
-    vitae debitis dicta expedita facere voluptatem?
-  </p>
-  <div class="d-flex justify-content-between">
-    <button
-      href="#"
-      class="btn btn-dark btn-outline-secondary rounded-pill col-lg-6"
-    >
-      Go to post
-    </button>
-    <img
-      src="../images/sobhan-joodi-Wl_N-A_Wp5U-unsplash.jpg"
-      class="img-thumbnail col-2 rounded-circle bg-secondary border border-0"
-      alt="Woman with black hair and dark sunglasses standing outside"
-    />
-  </div>
-</div>
-</div> */
-
 /**
  * This loops through and shows the 20 first posts from the API
  * @param {string} posts

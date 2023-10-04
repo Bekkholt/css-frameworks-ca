@@ -50,10 +50,14 @@ function filterPosts(posts, searchText) {
     const includes = postTitle.includes(search) || postBody.includes(search);
     return includes;
   });
-  console.log(results);
   return results;
 }
 
+/**
+ * This will make the HTML with the right
+ * inputs from the search
+ * @param {string} results
+ */
 function showResults(results) {
   const searchResult = document.querySelector(".search_result");
   const card = document.querySelector(".posts");
@@ -113,6 +117,11 @@ function showResults(results) {
   }
 }
 
+/**
+ * This will display all the
+ * correct search results in
+ * the HTML made in showResults
+ */
 async function allResults() {
   const searchedPosts = filterPosts(posts, search);
   showResults(searchedPosts);

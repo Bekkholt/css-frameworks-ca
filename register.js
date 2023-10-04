@@ -22,7 +22,6 @@ async function register(url, user) {
       body: JSON.stringify(user),
     };
     const response = await fetch(url, data);
-    console.log(response);
     const json = await response.json();
     return json;
   } catch (error) {}
@@ -41,7 +40,6 @@ async function submit() {
     password: password.value,
   };
   const json = await register(`${apiUrl}/api/v1/social/auth/register`, user);
-  console.log(json);
 
   if (json.statusCode === undefined) {
     const showSuccess = document.querySelector("#showSuccess");
@@ -66,6 +64,6 @@ form.addEventListener("submit", async (event) => {
   await submit();
 });
 
-// tina
-// tina.testuser@noroff.no
-// password1234
+// user: tina
+// mail: tina.testuser@noroff.no
+// password: password1234
