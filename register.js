@@ -7,8 +7,8 @@ const errorMessage = document.querySelector(".text-danger");
 
 /**
  * This will get the url and data from the API
- * @param {string} url
- * @param {string} user
+ * @param {string} url The API url
+ * @param {string} user The user data
  * @returns the json data
  */
 

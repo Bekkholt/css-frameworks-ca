@@ -10,7 +10,7 @@ const id = params.get("id");
 /**
  * This fetches the specific posts
  * from the API based on their IDs
- * @param {string} id
+ * @param {string} id The post ID
  * @returns the specific posts from ID
  */
 async function fetchSpecificPost(id) {
@@ -43,7 +43,7 @@ const bodyContainer = document.querySelector(".body");
  * This inserts the new input content
  * in the form so it can be
  * updated in the post
- * @param {string} post
+ * @param {string} post The specific post
  */
 function postDetails(post) {
   imageContainer.value = post.media;
@@ -56,10 +56,10 @@ postDetails(post);
 /**
  * This makes the edit of the post
  * in the API
- * @param {string} url
- * @param {string} image
- * @param {string} title
- * @param {string} body
+ * @param {string} url The post url
+ * @param {string} image The post image
+ * @param {string} title The post title
+ * @param {string} body The post body
  */
 async function editPost(url, image, title, body) {
   try {
@@ -86,7 +86,7 @@ async function editPost(url, image, title, body) {
  * and returns the user to the feed page
  * if succeeded or gives an
  * error message if it fails
- * @param {string} event
+ * @param {event} event The event that happens on click
  */
 async function onClick(event) {
   event.preventDefault();

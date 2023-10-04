@@ -10,7 +10,7 @@ const id = params.get("id");
 /**
  * This fetches the specific posts
  * from the API based on their IDs
- * @param {string} id
+ * @param {string} id The post ID
  * @returns the specific posts from ID
  */
 async function fetchSpecificPost(id) {
@@ -33,7 +33,7 @@ async function fetchSpecificPost(id) {
 /**
  * This will create the HTML with
  * the contents from the specific post
- * @param {string} specificPost
+ * @param {string} specificPost The fetched specific post
  */
 function createPostHTML(specificPost) {
   document.title = "SOME app" + " | " + specificPost.title;

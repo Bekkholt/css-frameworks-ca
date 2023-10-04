@@ -13,7 +13,7 @@ const id = params.get("id");
 /**
  * This deletes the selected
  * post from the API
- * @param {string} url
+ * @param {string} url The post url
  */
 async function deletePost(url) {
   try {
@@ -35,7 +35,7 @@ async function deletePost(url) {
  * and returns the user to the
  * feed page if succeeded or
  * gives an error message if it fails
- * @param {string} event
+ * @param {event} event The event that hhappens on click
  */
 async function onClick(event) {
   event.preventDefault();

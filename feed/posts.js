@@ -27,7 +27,7 @@ const posts = await fetchPosts(allPostsUrl);
 
 /**
  * This will display the posts from the API in the feed
- * @param {string} posts
+ * @param {string} posts The posts to display
  */
 
 export function displayPost(posts) {
@@ -81,7 +81,7 @@ export function displayPost(posts) {
 
 /**
  * This loops through and shows the 20 first posts from the API
- * @param {string} posts
+ * @param {string} posts The posts that loops through
  */
 function displayPosts(posts) {
   for (let i = 0; i < 20; i++) {

@@ -28,7 +28,7 @@ const posts = await fetchPosts(allPostsUrl);
 /**
  * This will filter through the posts
  * in the API and find the ones with an image
- * @param {string} post
+ * @param {string} post The post that gets filtered
  * @returns The posts with an image
  */
 function filterPosts(post) {
@@ -42,7 +42,7 @@ function filterPosts(post) {
  * This will make the HTML
  * for the posts that is returned
  * with an image from filterposts
- * @param {string} posts
+ * @param {string} posts The posts that has an image
  */
 function showPosts(posts) {
   const card = document.querySelector(".posts");

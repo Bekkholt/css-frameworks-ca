@@ -5,7 +5,7 @@ searchBar.addEventListener("keydown", handleKeyDown);
 /**
  * This will make the searchbar react to the event
  * and give out the results from the input value
- * @param {string} event
+ * @param {event} event The event that happens when pushing Enter
  */
 function handleKeyDown(event) {
   if (event.key === `Enter`) {

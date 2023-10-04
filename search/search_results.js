@@ -34,10 +34,10 @@ const posts = await fetchPosts(allPostsUrl);
  * This will run through the input text in
  * the search field and check if any of the
  * posts matches the input text
- * @param {string} posts
- * @param {string} searchText
+ * @param {string} posts The posts to search through
+ * @param {string} searchText The search text in the input
  * @returns the results of the posts that
- * matches the input text
+ * includes the input text in title or body
  */
 
 function filterPosts(posts, searchText) {
@@ -54,9 +54,9 @@ function filterPosts(posts, searchText) {
 }
 
 /**
- * This will make the HTML with the right
- * inputs from the search
- * @param {string} results
+ * This will make the HTML
+ * for the given posts
+ * @param {string} results The results of the search
  */
 function showResults(results) {
   const searchResult = document.querySelector(".search_result");

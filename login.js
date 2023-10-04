@@ -7,8 +7,8 @@ const password = document.querySelector("#inputPassword");
  * This will get the login data from the API and
  * send the access token to local storage and
  * the API
- * @param {string} url
- * @param {string} login
+ * @param {string} url The API url
+ * @param {string} login The login data
  * @returns the json data
  */
 
@@ -68,7 +68,7 @@ form.addEventListener("submit", async (event) => {
  * This will fetch the token from
  * local storage and put in the header
  * and get a list of posts from the API
- * @param {string} url
+ * @param {string} url The API url
  */
 
 async function fetchToken(url) {

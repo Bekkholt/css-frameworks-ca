@@ -14,10 +14,10 @@ const bodyContainer = document.querySelector(".body");
  * in the form with image, title
  * and body inputs that will
  * be posted to the API
- * @param {string} url
- * @param {string} image
- * @param {string} title
- * @param {string} body
+ * @param {string} url The post url
+ * @param {string} image The post image
+ * @param {string} title The post title
+ * @param {string} body The post body
  */
 async function createPost(url, image, title, body) {
   try {
@@ -44,7 +44,7 @@ async function createPost(url, image, title, body) {
  * and returns the user to the
  * feed page if succeeded or gives
  * an error message if it fails
- * @param {string} event
+ * @param {Event} event The event that happens on click
  */
 async function onClick(event) {
   event.preventDefault();
