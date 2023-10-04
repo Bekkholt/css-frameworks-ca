@@ -3,14 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="dist/css/main.css" />
+    <link rel="stylesheet" href="/dist/css/main.css" />
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
       crossorigin="anonymous"
     ></script>
-    <script type="module" src="/update-post.js"></script>
-    <script type="module" src="/delete-post.js"></script>
+    <script type="module" src="/modify_posts/create-post.js"></script>
     <title>Social Media Application</title>
   </head>
   <body class="bg-primary">
@@ -21,7 +20,7 @@
       >
     </nav>
     <main>
-      <h1 class="d-flex justify-content-center">Edit post</h1>
+      <h1 class="d-flex justify-content-center">Create new post</h1>
       <divc class="d-flex justify-content-center">
         <form class="container p-3 col-8">
           <div class="p-3">
@@ -34,11 +33,10 @@
           role="alert"
           id="showError"
         >
-          <p id="errorMessage">Error! Post is not updated/deleted.</p>
+          <p id="errorMessage">Error! Post not created.</p>
         </div>
           <div class="m-4">
-            <a type="button" class="btn btn-dark btn-outline-secondary p-2 m-3 rounded-pill d-flex justify-content-center update">Update post</a>
-            <a type="button" class="btn btn-danger btn-outline-dark p-2 m-3 rounded-pill d-flex justify-content-center delete">Delete post</a>
+            <a type="button" class="btn btn-dark btn-outline-secondary p-4 rounded-pill d-flex justify-content-center upload">Upload to feed</a>
           </div>
           <a type="button" class="btn m-3 d-flex justify-content-center" href="/profile/index.html"
           >Back</a

@@ -10,7 +10,7 @@ searchBar.addEventListener("keydown", handleKeyDown);
 function handleKeyDown(event) {
   if (event.key === `Enter`) {
     event.preventDefault();
-    const URL = "/search_results.html?search=";
+    const URL = "/search/search_results.html?search=";
     window.location.href = URL + searchBar.value;
   }
 }

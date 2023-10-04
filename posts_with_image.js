@@ -53,6 +53,13 @@ function showPosts(posts) {
     const postTitle = document.createElement("h5");
     const postText = document.createElement("p");
     const lowerCard = document.createElement("div");
+    const postLink = document.createElement("a");
+
+    const tags = lowerCard.appendChild(document.createElement(`h6`));
+    const button = postLink.appendChild(document.createElement(`button`));
+    const btnText = button.appendChild(document.createElement(`h6`));
+    const titleUrl = "/post_specific.html?id=";
+    postLink.href = titleUrl + `${posts[i].id}`;
 
     card.classList.add("col-10", "m-3", "col-md-8", "col-lg-6");
     cardTextContent.classList.add("mb-4", "p-3", "bg-light");
@@ -60,12 +67,19 @@ function showPosts(posts) {
     postTitle.classList.add("card-title");
     postText.classList.add("card-text");
     lowerCard.classList.add("d-flex");
-
-    const tags = lowerCard.appendChild(document.createElement(`h6`));
+    postLink.classList.add("btn-outline-secondary", "col-lg-6");
+    button.classList.add(
+      "btn",
+      "btn-dark",
+      "btn-outline-secondary",
+      "rounded-pill",
+      "mt-4"
+    );
 
     postTitle.textContent = posts[i].title;
     postText.textContent = posts[i].body;
     imageContainer.src = posts[i].media;
+    btnText.textContent = "Go to post";
 
     if (posts[i].tags) {
       tags.textContent = posts[i].tags;
@@ -76,6 +90,7 @@ function showPosts(posts) {
     cardTextContent.append(postTitle);
     cardTextContent.append(postText);
     cardTextContent.append(lowerCard);
+    lowerCard.append(postLink);
   }
 }
 

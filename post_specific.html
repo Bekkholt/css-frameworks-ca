@@ -10,16 +10,14 @@
       crossorigin="anonymous"
     ></script>
     <script type="module" src="/post_specific.js"></script>
-    <script type="module" src="/search.js"></script>
+    <script type="module" src="/search/search.js"></script>
     <title>Post specific</title>
   </head>
   <body class="bg-primary">
     <nav class="nav navbar d-flex justify-content-center">
-      <a class="btn" aria-current="page" href="/feed/index.html"
-        >Latest posts</a
-      >
+      <a class="btn" aria-current="page" href="/feed">Latest posts</a>
       <a class="btn nav-link active">Read post</a>
-      <a class="btn" href="/profile/index.html">My profile</a>
+      <a class="btn" href="/profile">My profile</a>
     </nav>
     <main>
       <div class="d-flex justify-content-center">
@@ -52,7 +50,7 @@
           </button>
           <ul class="dropdown-menu">
             <li>
-              <a class="dropdown-item" href="../new-post.html"
+              <a class="dropdown-item" href="/modify_posts/new-post.html"
                 >Create new post</a
               >
             </li>

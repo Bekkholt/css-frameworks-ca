@@ -54,8 +54,8 @@ function createPostHTML(specificPost) {
   const created = lowerEnd.appendChild(document.createElement(`h6`));
   const updateButton = updateLink.appendChild(document.createElement(`button`));
   const updateBtnText = updateButton.appendChild(document.createElement(`h6`));
-  const titleUrl = "../post_specific.html?id=";
-  const editURL = "/update-post.html?id=";
+  const titleUrl = "/post_specific.html?id=";
+  const editURL = "/modify_posts/update-post.html?id=";
   postLink.href = titleUrl + `${specificPost.id}`;
   updateLink.href = editURL + `${specificPost.id}`;
 
