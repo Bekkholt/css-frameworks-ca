@@ -1,11 +1,10 @@
+import { fetchSpecificPost } from "./modules.mjs";
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 
 const id = params.get("id");
 
 const username = localStorage.getItem("name");
-
-import { fetchSpecificPost } from "./modules.mjs";
 
 /**
  * This will create the HTML with
@@ -56,8 +55,6 @@ function createPostHTML(specificPost) {
   lastUpdated.textContent = "Last updated:" + " " + specificPost.updated;
   created.textContent = "Created:" + " " + specificPost.created;
   updateBtnText.textContent = "Edit post";
-
-  console.log(specificPost);
 
   if (specificPost.media) {
     imageContainer.src = specificPost.media;

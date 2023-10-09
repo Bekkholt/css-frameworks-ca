@@ -22,9 +22,6 @@ async function fetchPosts(url) {
     return posts;
   } catch (error) {}
 }
-
-export { fetchPosts };
-
 /**
  * This fetches the specific posts
  * from the API based on their IDs
@@ -50,8 +47,6 @@ async function fetchSpecificPost(id) {
     return result;
   } catch (error) {}
 }
-
-export { fetchSpecificPost };
 
 /**
  * This will display the posts from the API in the feed
@@ -107,8 +102,6 @@ function displayPost(posts) {
   lowerCard.append(postLink);
 }
 
-export { displayPost };
-
 /**
  * This loops through and shows the 20 first posts from the API
  * @param {string} posts The posts that loops through
@@ -123,4 +116,8 @@ function displayPosts(posts) {
     displayPost(post);
   }
 }
+
+export { fetchPosts };
+export { fetchSpecificPost };
+export { displayPost };
 export { displayPosts };

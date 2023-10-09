@@ -1,3 +1,4 @@
+import { fetchSpecificPost } from "../modules.mjs";
 const apiUrl = "https://api.noroff.dev";
 const postsUrl = "/api/v1/social/posts/";
 const allPostsUrl = apiUrl + postsUrl;
@@ -6,8 +7,6 @@ const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 
 const id = params.get("id");
-
-import { fetchSpecificPost } from "../modules.mjs";
 
 const post = await fetchSpecificPost(id);
 
