@@ -1,34 +1,11 @@
-const apiUrl = "https://api.noroff.dev";
-const postsUrl = "/api/v1/social/posts/";
-const allPostsUrl = apiUrl + postsUrl;
-
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 
 const id = params.get("id");
 
-/**
- * This fetches the specific posts
- * from the API based on their IDs
- * @param {string} id The post ID
- * @returns the specific posts from ID
- */
-async function fetchSpecificPost(id) {
-  try {
-    const token = localStorage.getItem("accessToken");
-    const getData = {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${token}`,
-      },
-    };
-    const response = await fetch(allPostsUrl + `${id}`, getData);
-    const result = await response.json();
+const username = localStorage.getItem("name");
 
-    return result;
-  } catch (error) {}
-}
+import { fetchSpecificPost } from "./modules.mjs";
 
 /**
  * This will create the HTML with
@@ -74,12 +51,13 @@ function createPostHTML(specificPost) {
     "col-3"
   );
 
-  btnText.textContent = "Go to post";
   postTitle.textContent = specificPost.title;
   postText.textContent = specificPost.body;
   lastUpdated.textContent = "Last updated:" + " " + specificPost.updated;
   created.textContent = "Created:" + " " + specificPost.created;
   updateBtnText.textContent = "Edit post";
+
+  console.log(specificPost);
 
   if (specificPost.media) {
     imageContainer.src = specificPost.media;
@@ -94,7 +72,9 @@ function createPostHTML(specificPost) {
   cardTextContent.append(postTitle);
   cardTextContent.append(postText);
   cardTextContent.append(lowerCard);
-  lowerCard.append(updateLink);
+  if (specificPost.author && specificPost.author.name === username) {
+    lowerCard.append(updateLink);
+  }
 }
 
 const specificPost = await fetchSpecificPost(id);

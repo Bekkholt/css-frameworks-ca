@@ -2,26 +2,7 @@ const apiUrl = "https://api.noroff.dev";
 const postsUrl = "/api/v1/social/posts/";
 const allPostsUrl = apiUrl + postsUrl;
 
-/**
- * This will get all the posts from the API
- * @returns all posts from API
- */
-
-async function fetchPosts(url) {
-  try {
-    const token = localStorage.getItem("accessToken");
-    const getData = {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${token}`,
-      },
-    };
-    const response = await fetch(url, getData);
-    const posts = await response.json();
-    return posts;
-  } catch (error) {}
-}
+import { fetchPosts } from "./modules.mjs";
 
 const posts = await fetchPosts(allPostsUrl);
 
@@ -32,7 +13,7 @@ const posts = await fetchPosts(allPostsUrl);
  * @returns The posts with an image
  */
 function filterPosts(post) {
-  const results = post.filter(function (posts) {
+  const results = post.filter((posts) => {
     if (posts.media) return posts;
   });
   return results;

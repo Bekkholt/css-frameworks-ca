@@ -25,6 +25,8 @@ async function userLogin(url, login) {
     const json = await response.json();
     const accessToken = json.accessToken;
     localStorage.setItem("accessToken", accessToken);
+    localStorage.setItem("name", json.name);
+    localStorage.setItem("avatar", json.avatar);
     return json;
   } catch (error) {}
 }

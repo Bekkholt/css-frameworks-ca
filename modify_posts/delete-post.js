@@ -44,7 +44,7 @@ async function onClick(event) {
   what is returned when it is successful
   and goes through to the API*/
   if (deletePost.statusCode === undefined) {
-    location.href = "/feed";
+    location.href = "/profile";
   } else {
     const showError = document.querySelector("#showError");
     showError.classList.remove("invisible");

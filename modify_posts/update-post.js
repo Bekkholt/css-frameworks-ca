@@ -7,28 +7,7 @@ const params = new URLSearchParams(queryString);
 
 const id = params.get("id");
 
-/**
- * This fetches the specific posts
- * from the API based on their IDs
- * @param {string} id The post ID
- * @returns the specific posts from ID
- */
-async function fetchSpecificPost(id) {
-  try {
-    const token = localStorage.getItem("accessToken");
-    const getData = {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${token}`,
-      },
-    };
-    const response = await fetch(allPostsUrl + `${id}`, getData);
-    const result = await response.json();
-
-    return result;
-  } catch (error) {}
-}
+import { fetchSpecificPost } from "../modules.mjs";
 
 const post = await fetchSpecificPost(id);
 
@@ -98,7 +77,7 @@ async function onClick(event) {
   what is returned when it is successful
   and goes through to the API*/
   if (editPost.statusCode === undefined) {
-    location.href = "/feed";
+    location.href = "/profile";
   } else {
     const showError = document.querySelector("#showError");
     showError.classList.remove("invisible");

@@ -7,26 +7,7 @@ const params = new URLSearchParams(queryString);
 
 const search = params.get("search");
 
-/**
- * This will get all the posts from the API
- * @returns all posts from API
- */
-
-async function fetchPosts(url) {
-  try {
-    const token = localStorage.getItem("accessToken");
-    const getData = {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${token}`,
-      },
-    };
-    const response = await fetch(url, getData);
-    const posts = await response.json();
-    return posts;
-  } catch (error) {}
-}
+import { fetchPosts } from "../modules.mjs";
 
 const posts = await fetchPosts(allPostsUrl);
 
