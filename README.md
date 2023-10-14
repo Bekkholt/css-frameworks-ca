@@ -1,16 +1,19 @@
-# css-frameworks-ca
+# JS2 CA
 
-![image](/images/Screenshot%202023-08-31%20131435.png)
+![image](/images/js2ca.jpg)
 
 ## Description
 
-This is my assignment for the CSS Frameworks CA. It is a social media application, meant to make it easier to follow you favorite blog-influencers. It is also meant to be able to write smaller pieces of text without a blog-image attatched.
+This is my assignment for the JS2 CA. It is based on the former CSS Frameworks CA. The site is a social media application called "SOME app", meant to make it easier to follow your favorite blog-influencers. SOME app is made to look clean and simple without too much clutter.
 
 ### Dependencies
 
 I have used Bootstrap and SASS for this assignment.
 
-## Installing the project
+I have used a trello-board at Trello.com to plan and schedule this CA for myself:
+https://trello.com/invite/b/8tvf3YxM/ATTI1f0d40cf11e78f8763178534489895235EB49543/javascript-2-ca
+
+## Installing and running the project locally
 
 ```
 npm install
@@ -26,4 +29,4 @@ tina.bekkholt@hotmail.com
 
 ## Acknowledgments
 
-I would like to mention the Noroff teachers, my fellow students and Torstein Alvern for the support during this project.
+I would like to mention the Noroff teachers, my fellow students and my boyfriend for the support during this project.

@@ -10,16 +10,15 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
-    <script type="module" src="posts.js"></script>
-    <script type="module" src="../search/search.js"></script>
-    <title>SOME app | Feed</title>
+    <script type="module" src="/post_specific.js"></script>
+    <script type="module" src="/search/search.js"></script>
+    <title>SOME app | Post specific</title>
   </head>
   <body class="bg-primary">
     <nav class="nav navbar d-flex justify-content-center">
-      <a class="nav-link btn active" aria-current="page" href="/feed/index.html"
-        >Latest posts</a
-      >
-      <a class="btn" href="/profile/index.html">My profile</a>
+      <a class="btn" aria-current="page" href="/feed">Latest posts</a>
+      <a class="btn nav-link active">Read post</a>
+      <a class="btn" href="/profile">My profile</a>
     </nav>
     <main>
       <div class="d-flex justify-content-center">
@@ -53,7 +52,7 @@
           </button>
           <ul class="dropdown-menu">
             <li>
-              <a class="dropdown-item" href="../modify_posts/new-post.html"
+              <a class="dropdown-item" href="/modify_posts/new-post.html"
                 >Create new post</a
               >
             </li>
@@ -71,7 +70,7 @@
           <ul class="dropdown-menu">
             <li>
               <a class="dropdown-item" href="/posts_with_image.html"
-                >Post with image</a
+                >Posts with images</a
               >
             </li>
           </ul>

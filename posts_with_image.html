@@ -10,16 +10,15 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
-    <script type="module" src="posts.js"></script>
-    <script type="module" src="../search/search.js"></script>
-    <title>SOME app | Feed</title>
+    <script type="module" src="/search/search.js"></script>
+    <script type="module" src="/posts_with_image.js"></script>
+    <title>SOME app | Posts with image</title>
   </head>
   <body class="bg-primary">
     <nav class="nav navbar d-flex justify-content-center">
-      <a class="nav-link btn active" aria-current="page" href="/feed/index.html"
-        >Latest posts</a
-      >
-      <a class="btn" href="/profile/index.html">My profile</a>
+      <a class="btn" href="/feed">Latest posts</a>
+      <a class="nav-link btn active" aria-current="page">Posts with image</a>
+      <a class="btn" href="/profile">My profile</a>
     </nav>
     <main>
       <div class="d-flex justify-content-center">
@@ -53,7 +52,7 @@
           </button>
           <ul class="dropdown-menu">
             <li>
-              <a class="dropdown-item" href="../modify_posts/new-post.html"
+              <a class="dropdown-item" href="/modify_posts/new-post.html"
                 >Create new post</a
               >
             </li>
@@ -71,14 +70,14 @@
           <ul class="dropdown-menu">
             <li>
               <a class="dropdown-item" href="/posts_with_image.html"
-                >Post with image</a
+                >Posts with image</a
               >
             </li>
           </ul>
         </div>
       </div>
       <div class="d-flex justify-content-center">
-        <div class="d-flex flex-column bg-primary posts"></div>
+        <div class="d-flex flex-column bg-primary posts_with_image posts"></div>
       </div>
     </main>
   </body>
