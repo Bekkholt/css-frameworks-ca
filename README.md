@@ -29,4 +29,4 @@ tina.bekkholt@hotmail.com
 
 ## Acknowledgments
 
-I would like to mention the Noroff teachers, my fellow students and Torstein Alvern for the support during this project.
+I would like to mention the Noroff teachers, my fellow students and my boyfriend for the support during this project.
