@@ -1,5 +1,6 @@
 import { fetchPosts } from "../modules.mjs";
-const apiUrl = "https://api.noroff.dev";
+import { apiUrl } from "../modules.mjs";
+
 const postsUrl = "/api/v1/social/posts/";
 const allPostsUrl = apiUrl + postsUrl;
 

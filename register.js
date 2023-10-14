@@ -1,9 +1,9 @@
-const apiUrl = "https://api.noroff.dev";
+import { apiUrl } from "../modules.mjs";
+
 const userName = document.querySelector("#username");
 const email = document.querySelector("#email");
 const password = document.querySelector("#inputPassword");
 const form = document.querySelector("#form");
-const errorMessage = document.querySelector(".text-danger");
 
 /**
  * This will get the url and data from the API
@@ -24,7 +24,9 @@ async function register(url, user) {
     const response = await fetch(url, data);
     const json = await response.json();
     return json;
-  } catch (error) {}
+  } catch (error) {
+    return error;
+  }
 }
 
 /**
@@ -63,7 +65,3 @@ form.addEventListener("submit", async (event) => {
   event.preventDefault();
   await submit();
 });
-
-// user: tina
-// mail: tina.testuser@noroff.no
-// password: password1234

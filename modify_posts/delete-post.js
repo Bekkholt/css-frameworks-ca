@@ -1,4 +1,5 @@
-const apiUrl = "https://api.noroff.dev";
+import { apiUrl } from "../modules.mjs";
+
 const postsUrl = "/api/v1/social/posts/";
 const allPostsUrl = apiUrl + postsUrl;
 
@@ -26,7 +27,10 @@ async function deletePost(url) {
       },
     };
     const response = await fetch(url, getData);
-  } catch (error) {}
+    return response;
+  } catch (error) {
+    return error;
+  }
 }
 
 /**
@@ -39,11 +43,8 @@ async function deletePost(url) {
  */
 async function onClick(event) {
   event.preventDefault();
-  await deletePost(allPostsUrl + id);
-  /* Statuscode is set to *undefined* as this is
-  what is returned when it is successful
-  and goes through to the API*/
-  if (deletePost.statusCode === undefined) {
+  const response = await deletePost(allPostsUrl + id);
+  if (response.ok) {
     location.href = "/profile";
   } else {
     const showError = document.querySelector("#showError");

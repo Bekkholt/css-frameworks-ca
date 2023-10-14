@@ -1,4 +1,5 @@
-const apiUrl = "https://api.noroff.dev";
+import { apiUrl } from "../modules.mjs";
+
 const postsUrl = "/api/v1/social/posts";
 const allPostsUrl = apiUrl + postsUrl;
 
@@ -35,7 +36,10 @@ async function createPost(url, image, title, body) {
       }),
     };
     const response = await fetch(url, getData);
-  } catch (error) {}
+    return response;
+  } catch (error) {
+    return error;
+  }
 }
 
 /**
@@ -51,11 +55,8 @@ async function onClick(event) {
   const image = imageContainer.value;
   const title = titleContainer.value;
   const body = bodyContainer.value;
-  await createPost(allPostsUrl, image, title, body);
-  /* Statuscode is set to *undefined* as this is
-  what is returned when it is successful
-  and goes through to the API*/
-  if (createPost.statusCode === undefined) {
+  const response = await createPost(allPostsUrl, image, title, body);
+  if (response.ok) {
     location.href = "/feed";
   } else {
     const showError = document.querySelector("#showError");

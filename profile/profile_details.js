@@ -6,8 +6,8 @@ const profileURL =
   "https://api.noroff.dev/api/v1/social/profiles/" + username + "/posts";
 
 /**
- * This will show the username and
- * avatar for the profile logged in
+ * This will show the username
+ * for the profile logged in
  */
 function displayUsername() {
   const usernameText = document.querySelector(".username");

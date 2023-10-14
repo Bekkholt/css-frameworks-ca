@@ -1,4 +1,5 @@
-const apiUrl = "https://api.noroff.dev";
+import { apiUrl } from "./modules.mjs";
+
 const form = document.querySelector("#form");
 const email = document.querySelector("#email");
 const password = document.querySelector("#inputPassword");
@@ -28,7 +29,9 @@ async function userLogin(url, login) {
     localStorage.setItem("name", json.name);
     localStorage.setItem("avatar", json.avatar);
     return json;
-  } catch (error) {}
+  } catch (error) {
+    return error;
+  }
 }
 
 /**
@@ -65,29 +68,3 @@ form.addEventListener("submit", async (event) => {
   event.preventDefault();
   await submit();
 });
-
-/**
- * This will fetch the token from
- * local storage and put in the header
- * and get a list of posts from the API
- * @param {string} url The API url
- */
-
-async function fetchToken(url) {
-  try {
-    const token = localStorage.getItem("accessToken");
-    const getData = {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${token}`,
-      },
-    };
-    const response = await fetch(url, getData);
-    const json = await response.json();
-  } catch (error) {}
-}
-
-// user: tina
-// mail: tina.testuser@noroff.no
-// password: password1234

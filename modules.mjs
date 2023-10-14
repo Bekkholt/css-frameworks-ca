@@ -20,7 +20,9 @@ async function fetchPosts(url) {
     const response = await fetch(url, getData);
     const posts = await response.json();
     return posts;
-  } catch (error) {}
+  } catch (error) {
+    return error;
+  }
 }
 /**
  * This fetches the specific posts
@@ -45,7 +47,9 @@ async function fetchSpecificPost(id) {
     const result = await response.json();
 
     return result;
-  } catch (error) {}
+  } catch (error) {
+    return error;
+  }
 }
 
 /**
@@ -117,6 +121,7 @@ function displayPosts(posts) {
   }
 }
 
+export { apiUrl };
 export { fetchPosts };
 export { fetchSpecificPost };
 export { displayPost };
